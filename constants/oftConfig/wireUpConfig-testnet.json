@@ -1,0 +1,28 @@
+{
+  "contractConfig": {
+    "name": "ExampleOFT"
+  },
+  "chainConfig": {
+    "goerli": {
+      "useCustomAdapterParams": true,
+      "remoteNetworkConfig": {
+        "bsc-testnet": {
+          "minDstGasConfig": [
+            5000
+          ]
+        }
+      }
+    },
+    "bsc-testnet": {
+      "useCustomAdapterParams": true,
+      "remoteNetworkConfig": {
+        "goerli": {
+          "minDstGasConfig": [
+            5000
+          ]
+        }
+      }
+    }
+  }
+}
+

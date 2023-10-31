@@ -14,7 +14,7 @@ module.exports = async function (taskArgs, hre) {
     const exampleOFT = await ethers.getContract("ExampleOFT")
 
     // quote fee with default adapterParams
-    let adapterParams = ethers.utils.solidityPack(["uint16", "uint256"], [1, 100000])
+    let adapterParams = ethers.utils.solidityPack(["uint16", "uint256"], [1, parseInt(taskArgs.dstGasLimit)])
 
     let fees = await exampleOFT.estimateSendFee(remoteChainId, toAddress, qty, false, adapterParams)
     console.log(`fees[0] (wei): ${fees[0]} / (eth): ${ethers.utils.formatEther(fees[0])}`)

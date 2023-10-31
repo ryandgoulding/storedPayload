@@ -1,0 +1,28 @@
+{
+  "contractConfig": {
+    "name": "ExampleOFT"
+  },
+  "chainConfig": {
+    "polygon": {
+      "useCustomAdapterParams": true,
+      "remoteNetworkConfig": {
+        "optimism": {
+          "minDstGasConfig": [
+            5000
+          ]
+        }
+      }
+    },
+    "optimism": {
+      "useCustomAdapterParams": true,
+      "remoteNetworkConfig": {
+        "polygon": {
+          "minDstGasConfig": [
+            5000
+          ]
+        }
+      }
+    }
+  }
+}
+

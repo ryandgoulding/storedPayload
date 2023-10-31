@@ -97,7 +97,7 @@ const config: HardhatUserConfig = {
       accounts: accounts(),
     },
     optimism: {
-      url: `https://opt-mainnet.g.alchemy.com/v2/demo`,
+      url: `https://optimism.llamarpc.com`,
       chainId: 10,
       accounts: accounts(),
     },
